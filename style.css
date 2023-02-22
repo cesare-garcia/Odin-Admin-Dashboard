@@ -4,7 +4,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 250px 2fr;
     grid-template-rows: 150px 4fr;
 }
 
@@ -36,16 +36,36 @@ body {
 
 .card-container {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .left-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 700px;
 }
+
+.card {
+    height: 200px;
+    background-color: white;
+}
+
+
 
 .right-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+
+}
+
+.announcement-card {
+    background-color: white;
+}
+
+.trending-card {
+    background-color: white;
 }
