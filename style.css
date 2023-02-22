@@ -5,7 +5,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 250px 2fr;
-    grid-template-rows: 150px 4fr;
+    grid-template-rows: 120px 4fr;
 }
 
 .header {
@@ -13,39 +13,60 @@ body {
     grid-column: 2/3;
     box-shadow: 5px 5px 5px rgb(196, 195, 195);
     display: grid;
-    grid-template-columns: 300px 100px;
-    grid-template-rows: 60px 75px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 65px;
 }
 
 input[type='search'] {
-    height: 25px;
-    width: 75px;
+    height: 22px;
+    width: 450px;
     background-color: rgba(213, 219, 225, 0.802);
     border: none;
     border-radius: 10px;
+    place-self: center center;
 }
 
 input[type='search']:focus {
     outline: none;
 }
 
+.top-right {
+    justify-self: center;
+}
+
+.user-greeting {
+    place-self: center center;
+}
+
 .button-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 20px;
+    justify-items: center;
 }
 
 button {
-    background-color: rgb(9, 165, 238);
+    background-color: rgb(3, 157, 229);
     color: white;
     border: none;
+    width: 85px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.sidebar-top {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.sidebar-title {
+    grid-column: 2/3;
 }
 
 .sidebar {
     grid-column: 1/2;
     grid-row: 1/3;
-    background-color: rgb(9, 165, 238);
+    background-color: rgb(3, 157, 229);
 }
 
 .sidebar>ul,
@@ -55,6 +76,26 @@ button {
     color: white;
     font-family: sans-serif;
     font-weight: bold;
+}
+
+.nav,
+.other-nav {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    padding: 0;
+    margin: 0;
+    letter-spacing: .5px;
+    row-gap: 10px;
+}
+
+.nav>li,
+.other-nav>li {
+    grid-column: 2/3;
+}
+
+.other-nav {
+    position: relative;
+    top: 50px;
 }
 
 .main-content {
@@ -102,11 +143,19 @@ p {
     font-size: 13px;
 }
 
+p.your-project,
+p.ann-head,
+p.trend-title {
+    font-family: sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .misc-content {
     grid-column: 3/4;
     grid-row: 1/4;
     display: grid;
-    gap: 25px;
 }
 
 .announcement-card {
@@ -115,6 +164,12 @@ p {
     border-radius: 5px;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+p.trend-title {
+    margin: 0;
+    place-self: end start;
+    padding-bottom: 10px;
 }
 
 .trending-card {
