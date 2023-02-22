@@ -63,6 +63,16 @@ button {
     background-color: rgba(213, 219, 225, 0.802);
 }
 
+.heading-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 285px;
+    font-family: sans-serif;
+}
+
+.ann-head {
+    grid-column: 3/4;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 285px;
