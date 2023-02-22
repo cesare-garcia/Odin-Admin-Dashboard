@@ -63,6 +63,10 @@ button {
     grid-column: 2/3;
 }
 
+.sidebar-icon {
+    grid-column: 1/2;
+}
+
 .sidebar {
     grid-column: 1/2;
     grid-row: 1/3;
