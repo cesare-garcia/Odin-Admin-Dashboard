@@ -29,7 +29,7 @@ input[type='search'] {
     background-color: rgba(213, 219, 225, 0.802);
     border: none;
     border-radius: 10px;
-    place-self: center center;
+    place-self: center start;
 }
 
 input[type='search']:focus {
@@ -39,6 +39,7 @@ input[type='search']:focus {
 .top-left {
     display: grid;
     grid-template-columns: 50px 1fr;
+    fill: rgb(116, 116, 116);
 }
 
 .top-right {
@@ -132,13 +133,15 @@ button {
 }
 
 .heading-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) 285px;
     font-family: sans-serif;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 315px;
+    place-items: end start;
 }
 
 .ann-head {
-    grid-column: 3/4;
+    place-self: start start;
 }
 
 .card-container {
@@ -204,6 +207,7 @@ p.trend-title {
     border-radius: 5px;
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 20px;
 }
 
 .announcement>p>b {
@@ -220,7 +224,7 @@ p.trend-title {
     background-color: white;
     box-shadow: 5px 5px 5px rgb(196, 195, 195);
     border-radius: 5px;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-left: 30px;
     padding-right: 30px;
     place-items: center center;
@@ -229,5 +233,5 @@ p.trend-title {
 .trending-topic {
     display: grid;
     grid-template-columns: 50px 1fr;
-    gap: 10px;
+    gap: 20px;
 }
